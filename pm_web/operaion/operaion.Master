@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="operaion.master.cs" Inherits="pm_web.operaion.operaion" %>
+
+<!DOCTYPE html>
+
+
+
+   <html lang="en">
+
+   
+
+<head>
+     <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="NewFolder1/style.css" rel="stylesheet" />
+    
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+        
+      #k:hover{
+
+          background-color:#810000;
+          border-bottom:5px solid #1AE5C9;
+                  border-style:inset;
+                  border-top:3px solid #1AE5C9;
+                    border-right:3px solid #1AE5C9;
+          border-left:3px solid #1AE5C9;
+       
+                   
+              transition: all .2s ease;       
+                    
+      } 
+
+        #kk:hover{
+
+          background-color:#810000;
+          border-bottom:5px solid #1AE5C9;
+                  border-style:inset;
+                  border-top:3px solid #1AE5C9;
+                    border-right:3px solid #1AE5C9;
+          border-left:3px solid #1AE5C9;
+       
+                   
+              transition: all .2s ease;       
+                    
+      }
+          #kkk:hover{
+         
+         
+         
+
+          background-color:#810000;
+          border-bottom:5px solid #1AE5C9;
+                  border-style:inset;
+                  border-top:3px solid #1AE5C9;
+                    border-right:3px solid #1AE5C9;
+          border-left:3px solid #1AE5C9;
+       
+                   
+              transition: all .2s ease;       
+                    
+      }
+      
+       #kkkk:hover{
+
+          background-color:#810000;
+          border-bottom:5px solid #1AE5C9;
+                  border-style:inset;
+                  border-top:3px solid #1AE5C9;
+                    border-right:3px solid #1AE5C9;
+          border-left:3px solid #1AE5C9;
+       
+                   
+              transition: all .2s ease;       
+                    
+      }
+       #mar100{
+  background-color:#810000;
+          border-bottom:5px solid #1AE5C9;
+                  border-style:inset;
+                  border-top:3px solid #1AE5C9;
+                    border-right:3px solid #1AE5C9;
+          border-left:3px solid #1AE5C9;
+       
+                   
+              transition: all .2s ease;        
+                    
+       }
+
+
+
+
+    </style>
+</head>
+<body>
+    <form runat="server">
+    
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black">
+  <div class="container-fluid">
+    
+    <ul class="nav navbar-nav" style="width:1000px;height:50px;">
+      <%--<li ><a id="k" href="#" style="color:white;display:block;font-family:Star Jedi Outline by Boba Fonts ;font-size:20px;">Home</a></li>--%>
+         <li ><a id="mar100" href="http://localhost:53398/index.html" style="color:white;display:block;font-family:Star Jedi Outline by Boba Fonts ;font-size:20px;">ChatRoom</a></li>
+       <li ><a id="kk"  href="WebForm1.aspx"  style="color:white ;font-family:Star Jedi Outline by Boba Fonts;font-size:20px"> Reports  </a></li>
+      <li ><a id="kkkk" href="advertising.aspx" style="color:white;display:block;font-family:Star Jedi Outline by Boba Fonts ;font-size:20px;">Advertising</a></li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      
+      <li ><a  id="kkk" href="../general/WebForm1.aspx"  style="color:white;display:block;font-family:Star Jedi Outline by Boba Fonts;font-size:20px"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+   
+</nav>
+  
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form> 
+    <br />
+     <br />
+    <a href="https://www.facebook.com/BMK.User/" style="margin-left:50%; margin-bottom:0px; font-size: large; font-style: italic; color: #FF6600;"> B M K</a>
+</body>
+</html>

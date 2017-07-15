@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A67C45C-F137-4AC7-A95B-929CBC1B7F26}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pm_web</RootNamespace>
+    <AssemblyName>pm_web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.1.0\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2.jpg" />
+    <Content Include="4.jpg" />
+    <Content Include="8.jpg" />
+    <Content Include="admin page\1.jpg" />
+    <Content Include="admin page\2.jpg" />
+    <Content Include="admin page\3.jpg" />
+    <Content Include="admin page\4.jpg" />
+    <Content Include="admin page\5.jpg" />
+    <Content Include="admin page\6.jpg" />
+    <Content Include="admin page\Admin.aspx" />
+    <Content Include="admin page\Admin1.aspx" />
+    <Content Include="admin page\bootstrap.css" />
+    <Content Include="admin page\bootstrap.js" />
+    <Content Include="admin page\bootstrap.min.css" />
+    <Content Include="admin page\bootstrap.min.js" />
+    <Content Include="admin page\creative.css" />
+    <Content Include="admin page\creative.js" />
+    <Content Include="admin page\creative.min.css" />
+    <Content Include="admin page\creative.min.js" />
+    <Content Include="admin page\font-awesome.css" />
+    <Content Include="admin page\font-awesome.min.css" />
+    <Content Include="admin page\fontawesome-webfont.svg" />
+    <Content Include="admin page\glyphicons-halflings-regular.svg" />
+    <Content Include="admin page\gulpfile.js" />
+    <Content Include="admin page\header.jpg" />
+    <Content Include="admin page\index.html" />
+    <Content Include="admin page\jquery.js" />
+    <Content Include="admin page\jquery.magnific-popup.js" />
+    <Content Include="admin page\jquery.magnific-popup.min.js" />
+    <Content Include="admin page\jquery.min.js" />
+    <Content Include="admin page\magnific-popup.css" />
+    <Content Include="admin page\progr.png" />
+    <Content Include="admin page\scrollreveal.js" />
+    <Content Include="admin page\scrollreveal.min.js" />
+    <Content Include="admin page\StyleSheet1.css" />
+    <Content Include="Admin1\changes.txt" />
+    <Content Include="Admin1\jquery.scrollTo-min.js" />
+    <Content Include="Admin1\jquery.scrollTo.js" />
+    <Content Include="Admin1\script.js" />
+    <Content Include="Admin1\styles.css" />
+    <Content Include="Admin1\template.html" />
+    <Content Include="Admin1\WebForm1.aspx" />
+    <Content Include="admin\JavaScript.js" />
+    <Content Include="admin\JavaScript1.js" />
+    <Content Include="admin\signup.aspx" />
+    <Content Include="admin\StyleSheet1.css" />
+    <Content Include="admin\WebForm1.aspx" />
+    <Content Include="admin\WebForm2.aspx" />
+    <Content Include="admin\WebForm3.aspx" />
+    <Content Include="adver1.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="general\1.jpg" />
+    <Content Include="general\2.jpg" />
+    <Content Include="general\3.jpg" />
+    <Content Include="general\4.jpg" />
+    <Content Include="general\agency.css" />
+    <Content Include="general\agency.js" />
+    <Content Include="general\agency.min.css" />
+    <Content Include="general\agency.min.js" />
+    <Content Include="general\b.jpg" />
+    <Content Include="general\bootstrap.css" />
+    <Content Include="general\bootstrap.js" />
+    <Content Include="general\bootstrap.min.css" />
+    <Content Include="general\bootstrap.min.js" />
+    <Content Include="general\contact_me.js" />
+    <Content Include="general\creative-market.jpg" />
+    <Content Include="general\designmodo.jpg" />
+    <Content Include="general\envato.jpg" />
+    <Content Include="general\font-awesome.css" />
+    <Content Include="general\font-awesome.min.css" />
+    <Content Include="general\fontawesome-webfont.svg" />
+    <Content Include="general\glyphicons-halflings-regular.svg" />
+    <Content Include="general\gulpfile.js" />
+    <Content Include="general\header-bg.jpg" />
+    <Content Include="general\jqBootstrapValidation.js" />
+    <Content Include="general\jquery.js" />
+    <Content Include="general\jquery.min.js" />
+    <Content Include="general\karar.jpg" />
+    <Content Include="general\manager type.png" />
+    <Content Include="general\map-image.png" />
+    <Content Include="general\mar99.jpg" />
+    <Content Include="general\themeforest.jpg" />
+    <Content Include="general\WebForm1.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="chat\HtmlPage1.html" />
+    <Content Include="image\hd2.jpg" />
+    <Content Include="log in\login.aspx" />
+    <Content Include="log in\login.css" />
+    <Content Include="manager\adver.aspx" />
+    <Content Include="manager\charts.aspx" />
+    <Content Include="manager\demo1.html" />
+    <Content Include="manager\demo2.html" />
+    <Content Include="manager\demo3.html" />
+    <Content Include="manager\demo4.html" />
+    <Content Include="manager\demo5.html" />
+    <Content Include="manager\demo6.html" />
+    <Content Include="manager\demo7.html" />
+    <Content Include="manager\demo8.html" />
+    <Content Include="medial_manger\adver2.aspx" />
+    <Content Include="medial_manger\demo1.html" />
+    <Content Include="medial_manger\generic.css" />
+    <Content Include="manager\reports.aspx" />
+    <Content Include="manager\themes\bullet.png" />
+    <Content Include="manager\themes\js-image-slider.css" />
+    <Content Include="manager\themes\js-image-slider.js" />
+    <Content Include="medial_manger\report_middal.aspx" />
+    <Content Include="medial_manger\themes\bullet.png" />
+    <Content Include="medial_manger\themes\js-image-slider.css" />
+    <Content Include="medial_manger\themes\js-image-slider.js" />
+    <Content Include="operaion\advertising.aspx" />
+    <Content Include="chat.jpg" />
+    <Content Include="operaion\demo1.html" />
+    <Content Include="operaion\generic.css" />
+    <Content Include="operaion\themes\bullet.png" />
+    <Content Include="operaion\themes\js-image-slider.css" />
+    <Content Include="operaion\themes\js-image-slider.js" />
+    <Content Include="operaion\WebForm1.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="admin\admin1.Master" />
+    <Content Include="general\.gitignore" />
+    <Content Include="general\agency.less" />
+    <Content Include="general\agency.scss" />
+    <Content Include="general\animated.less" />
+    <Content Include="general\bordered-pulled.less" />
+    <Content Include="general\contact_me.php" />
+    <Content Include="general\core.less" />
+    <Content Include="general\fixed-width.less" />
+    <Content Include="general\font-awesome.less" />
+    <Content Include="general\font-awesome.scss" />
+    <Content Include="general\fontawesome-webfont.eot" />
+    <Content Include="general\fontawesome-webfont.ttf" />
+    <Content Include="general\fontawesome-webfont.woff" />
+    <Content Include="general\fontawesome-webfont.woff2" />
+    <Content Include="general\FontAwesome.otf" />
+    <Content Include="general\glyphicons-halflings-regular.eot" />
+    <Content Include="general\glyphicons-halflings-regular.ttf" />
+    <Content Include="general\glyphicons-halflings-regular.woff" />
+    <Content Include="general\glyphicons-halflings-regular.woff2" />
+    <Content Include="general\icons.less" />
+    <Content Include="general\larger.less" />
+    <Content Include="general\list.less" />
+    <Content Include="general\mixins.less" />
+    <Content Include="general\package.json" />
+    <Content Include="general\path.less" />
+    <Content Include="general\README.md" />
+    <Content Include="general\rotated-flipped.less" />
+    <Content Include="general\screen-reader.less" />
+    <Content Include="general\stacked.less" />
+    <Content Include="general\variables.less" />
+    <Content Include="general\_animated.scss" />
+    <Content Include="general\_bordered-pulled.scss" />
+    <Content Include="general\_core.scss" />
+    <Content Include="general\_fixed-width.scss" />
+    <Content Include="general\_icons.scss" />
+    <Content Include="general\_larger.scss" />
+    <Content Include="general\_list.scss" />
+    <Content Include="general\_mixins.scss" />
+    <Content Include="general\_path.scss" />
+    <Content Include="general\_rotated-flipped.scss" />
+    <Content Include="general\_screen-reader.scss" />
+    <Content Include="general\_stacked.scss" />
+    <Content Include="general\_variables.scss" />
+    <Content Include="admin page\.gitignore" />
+    <Content Include="admin page\animated.less" />
+    <Content Include="admin page\bordered-pulled.less" />
+    <Content Include="admin page\core.less" />
+    <Content Include="admin page\creative.less" />
+    <Content Include="admin page\fixed-width.less" />
+    <Content Include="admin page\font-awesome.less" />
+    <Content Include="admin page\font-awesome.scss" />
+    <Content Include="admin page\fontawesome-webfont.eot" />
+    <Content Include="admin page\fontawesome-webfont.ttf" />
+    <Content Include="admin page\fontawesome-webfont.woff" />
+    <Content Include="admin page\fontawesome-webfont.woff2" />
+    <Content Include="admin page\FontAwesome.otf" />
+    <Content Include="admin page\glyphicons-halflings-regular.eot" />
+    <Content Include="admin page\glyphicons-halflings-regular.ttf" />
+    <Content Include="admin page\glyphicons-halflings-regular.woff" />
+    <Content Include="admin page\glyphicons-halflings-regular.woff2" />
+    <Content Include="admin page\icons.less" />
+    <Content Include="admin page\larger.less" />
+    <Content Include="admin page\LICENSE" />
+    <Content Include="admin page\list.less" />
+    <Content Include="admin page\mixins.less" />
+    <Content Include="admin page\package.json" />
+    <Content Include="admin page\path.less" />
+    <Content Include="admin page\README.md" />
+    <Content Include="admin page\rotated-flipped.less" />
+    <Content Include="admin page\screen-reader.less" />
+    <Content Include="admin page\stacked.less" />
+    <Content Include="admin page\variables.less" />
+    <Content Include="admin page\_animated.scss" />
+    <Content Include="admin page\_bordered-pulled.scss" />
+    <Content Include="admin page\_core.scss" />
+    <Content Include="admin page\_fixed-width.scss" />
+    <Content Include="admin page\_icons.scss" />
+    <Content Include="admin page\_larger.scss" />
+    <Content Include="admin page\_list.scss" />
+    <Content Include="admin page\_mixins.scss" />
+    <Content Include="admin page\_path.scss" />
+    <Content Include="admin page\_rotated-flipped.scss" />
+    <Content Include="admin page\_screen-reader.scss" />
+    <Content Include="admin page\_stacked.scss" />
+    <Content Include="admin page\_variables.scss" />
+    <Content Include="manager\Site1.Master" />
+    <Content Include="SignalRChat.sln" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="medial_manger\medal.Master" />
+    <Content Include="operaion\operaion.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.js" />
+    <Content Include="login.aspx" />
+    <Content Include="style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin page\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin page\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin page\Admin1.aspx.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin page\Admin1.aspx.designer.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin1\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin1\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin1.Master.cs">
+      <DependentUpon>admin1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin1.Master.designer.cs">
+      <DependentUpon>admin1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adver1.aspx.cs">
+      <DependentUpon>adver1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adver1.aspx.designer.cs">
+      <DependentUpon>adver1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chat\ChatHub.cs" />
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="general\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="general\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="log in\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="log in\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\adver.aspx.cs">
+      <DependentUpon>adver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\adver.aspx.designer.cs">
+      <DependentUpon>adver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\charts.aspx.cs">
+      <DependentUpon>charts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\charts.aspx.designer.cs">
+      <DependentUpon>charts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\reports.aspx.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\reports.aspx.designer.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="medial_manger\adver2.aspx.cs">
+      <DependentUpon>adver2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medial_manger\adver2.aspx.designer.cs">
+      <DependentUpon>adver2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medial_manger\medal.Master.cs">
+      <DependentUpon>medal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medial_manger\medal.Master.designer.cs">
+      <DependentUpon>medal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="medial_manger\report_middal.aspx.cs">
+      <DependentUpon>report_middal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medial_manger\report_middal.aspx.designer.cs">
+      <DependentUpon>report_middal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="operaion\advertising.aspx.cs">
+      <DependentUpon>advertising.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operaion\advertising.aspx.designer.cs">
+      <DependentUpon>advertising.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="operaion\operaion.Master.cs">
+      <DependentUpon>operaion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operaion\operaion.Master.designer.cs">
+      <DependentUpon>operaion.Master</DependentUpon>
+    </Compile>
+    <Compile Include="operaion\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operaion\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="chat\Startup.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="log_in\" />
+    <Folder Include="manager\images\" />
+    <Folder Include="medial_manger\images\" />
+    <Folder Include="operaion\images\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21679</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21679/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
